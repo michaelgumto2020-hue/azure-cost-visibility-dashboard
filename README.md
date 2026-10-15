@@ -145,17 +145,6 @@ Resource Graph tiles.
   address, and reliably lands in spam on first send. This is a structural
   limitation of not owning a domain, not a configuration gap — documented
   here rather than chased further.
-- **Microsoft Entra Security Defaults blocking `az login --use-device-code`**
-  — a tenant's Security Defaults policy can reject the device-code sign-in
-  flow outright (`AADSTS530035`) for reasons unrelated to the actual
-  account/subscription being valid. Switching to a standard interactive
-  `az login` resolved it immediately — worth trying before assuming a
-  deeper account or tenant problem.
-- **`Standard_D2as_v4` as a stand-in when expected VM sizes aren't
-  available** — unrelated to this specific project, but a recurring,
-  genuine Azure capacity reality worth remembering: always verify actual
-  available SKUs (`az vm list-skus`) rather than assuming a commonly
-  documented size will be deployable in every region at all times.
 
 ---
 
