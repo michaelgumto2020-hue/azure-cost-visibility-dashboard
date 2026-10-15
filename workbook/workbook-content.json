@@ -1,0 +1,45 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "Resources\r\n| summarize ResourceCount = count() by type\r\n| order by ResourceCount desc",
+        "size": 0,
+        "queryType": 1,
+        "resourceType": "microsoft.resourcegraph/resources",
+        "crossComponentResources": [
+          "value::selected"
+        ],
+        "visualization": "barchart"
+      },
+      "name": "query - 0"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "query": "Resources\r\n| summarize ResourceCount = count() by resourceGroup\r\n| order by ResourceCount desc",
+        "size": 0,
+        "queryType": 1,
+        "resourceType": "microsoft.resourcegraph/resources",
+        "crossComponentResources": [
+          "value::selected"
+        ]
+      },
+      "name": "query - 1"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "## Cost Governance Summary\r\n\r\n- **Monthly Budget:** $50\r\n- **Alert Threshold:** 80% of budget\r\n- **Notification Path:** Azure Monitor Action Group → Logic App → SendGrid email\r\n- **Budget Scope:** Subscription-wide"
+      },
+      "name": "text - 2"
+    }
+  ],
+  "fallbackResourceIds": [
+    "Azure Monitor"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}

@@ -1,0 +1,3 @@
+subscription_id = "subscription_id"
+alert_email     = "email@example.com"
+sendgrid_api_key = "Sendgrid API key"
